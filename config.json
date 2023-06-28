@@ -1,0 +1,35 @@
+{
+  "tenants": [
+    {
+      "name": "development-new",
+      "source_db_url": "cluster0.dlbyh.mongodb.net",
+      "source_db_user": "mozark-mongo",
+      "source_db_password": "9bZu8T5ZHMy3Vn1R",
+      "destination_db_url": "automation-dashboard-mysql-rds.chgg9hhqherh.ap-south-1.rds.amazonaws.com",
+      "destination_db_user": "mozarkadmin",
+      "destination_db_password": "Mozark##2023",
+      "details": {
+        "kpi_source_db": "development-app-testing",
+        "kpi_source_collection": "development-AppTestingKpis",
+        "kpi_test_identifier_key": "testId",
+        "kpi_date_time_key": "dateTime",
+        "kpi_test_identifier_type": "string",
+        "test_source_db_details": {
+          "type": "mongodb",
+          "url": "cluster0.dlbyh.mongodb.net",
+          "user": "mozark-mongo",
+          "password": "9bZu8T5ZHMy3Vn1R",
+          "db": "development-app-testing",
+          "table": "development-testAnalytics",
+          "test_identifier_key": "uuid.testId",
+          "test_date_time_key": "info.testStartTime"
+        },
+        "kpi_destination_details": {
+          "db": "development_analytics",
+          "table": "development_app_testing_kpis",
+          "analytics_table": "test_analytics_kpis"
+        }
+      }
+    }
+  ]
+}

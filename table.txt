@@ -1,0 +1,95 @@
+CREATE TABLE `app_testing_kpis` (
+  `uuid` varchar(50) NOT NULL,
+  `test_id` varchar(50) DEFAULT NULL,
+  `test_start_date_time` datetime DEFAULT NULL,
+  `test_end_date_time` datetime DEFAULT NULL,
+  `test_status` varchar(45) DEFAULT NULL,
+  `project_name` varchar(45) DEFAULT NULL,
+  `application_name` varchar(45) DEFAULT NULL,
+  `application_package_name` varchar(45) DEFAULT NULL,
+  `application_package_version` varchar(45) DEFAULT NULL,
+  `test_script_name` varchar(45) DEFAULT NULL,
+  `device_make` varchar(45) DEFAULT NULL,
+  `device_model` varchar(45) DEFAULT NULL,
+  `device_platform` varchar(45) DEFAULT NULL,
+  `device_platform_version` varchar(45) DEFAULT NULL,
+  `device_city` varchar(45) DEFAULT NULL,
+  `device_country` varchar(45) DEFAULT NULL,
+  `device_location` varchar(45) DEFAULT NULL,
+  `user_name` varchar(45) DEFAULT NULL,
+  `browser_name` varchar(45) DEFAULT NULL,
+  `browser_version` varchar(45) DEFAULT NULL,
+  `device_network_type` varchar(45) DEFAULT NULL,
+  `device_mobile_operator` varchar(45) DEFAULT NULL,
+  `device_mobile_network_technology` varchar(45) DEFAULT NULL,
+  `device_city_from_geo_code` varchar(45) DEFAULT NULL,
+  `device_city_from_isp` varchar(45) DEFAULT NULL,
+  `device_cellular_network_id` varchar(45) DEFAULT NULL,
+  `device_serial` varchar(50) DEFAULT NULL,
+  `additional_info_1` varchar(45) DEFAULT NULL,
+  `additional_info_2` varchar(45) DEFAULT NULL,
+  `additional_info_3` varchar(45) DEFAULT NULL,
+  `additional_info_4` varchar(45) DEFAULT NULL,
+  `additional_info_5` varchar(45) DEFAULT NULL,
+  `test_case_name` varchar(250) DEFAULT NULL,
+  `kpi_name` varchar(100) DEFAULT NULL,
+  `kpi_value` varchar(45) DEFAULT NULL,
+  `kpi_status` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`uuid`),
+  UNIQUE KEY `uuid_UNIQUE` (`uuid`)
+)
+
+CREATE TABLE IF NOT EXISTS `test_analytics_kpis` (
+  `uuid` varchar(50) NOT NULL,
+  `test_id` varchar(50) DEFAULT NULL,
+  `test_status` varchar(45) DEFAULT NULL,
+  `test_case_name` varchar(250) DEFAULT NULL,
+  `test_case_status` varchar(45) DEFAULT NULL,
+  `test_case_start_date_time` datetime DEFAULT NULL,
+  `test_case_end_date_time` datetime DEFAULT NULL,
+  `test_start_date_time` datetime DEFAULT NULL,
+  `test_end_date_time` datetime DEFAULT NULL,
+  `project_name` varchar(45) DEFAULT NULL,
+  `application_name` varchar(45) DEFAULT NULL,
+  `application_package_name` varchar(45) DEFAULT NULL,
+  `application_package_version` varchar(45) DEFAULT NULL,
+  `test_script_name` varchar(45) DEFAULT NULL,
+  `device_make` varchar(45) DEFAULT NULL,
+  `device_model` varchar(45) DEFAULT NULL,
+  `device_platform` varchar(45) DEFAULT NULL,
+  `device_platform_version` varchar(45) DEFAULT NULL,
+  `device_city` varchar(45) DEFAULT NULL,
+  `device_country` varchar(45) DEFAULT NULL,
+  `device_location` varchar(45) DEFAULT NULL,
+  `user_name` varchar(45) DEFAULT NULL,
+  `browser_name` varchar(45) DEFAULT NULL,
+  `browser_version` varchar(45) DEFAULT NULL,
+  `device_network_type` varchar(45) DEFAULT NULL,
+  `device_mobile_operator` varchar(45) DEFAULT NULL,
+  `device_mobile_network_technology` varchar(45) DEFAULT NULL,
+  `device_city_from_geo_code` varchar(45) DEFAULT NULL,
+  `device_city_from_isp` varchar(45) DEFAULT NULL,
+  `device_cellular_network_id` varchar(45) DEFAULT NULL,
+  `device_serial` varchar(50) DEFAULT NULL,
+  `additional_info_1` varchar(45) DEFAULT NULL,
+  `additional_info_2` varchar(45) DEFAULT NULL,
+  `additional_info_3` varchar(45) DEFAULT NULL,
+  `additional_info_4` varchar(45) DEFAULT NULL,
+  `additional_info_5` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`uuid`),
+  UNIQUE KEY `uuid_UNIQUE` (`uuid`)
+)
+
+# newly added columns
+alter table app_testing_kpis add additional_info_6 varchar(45) default null;
+alter table app_testing_kpis add additional_info_7 varchar(45) default null;
+alter table app_testing_kpis add additional_info_8 varchar(45) default null;
+alter table app_testing_kpis add additional_info_9 varchar(45) default null;
+alter table app_testing_kpis add additional_info_10 varchar(45) default null;
+
+alter table test_analytics_kpis add additional_info_6 varchar(45) default null;
+alter table test_analytics_kpis add additional_info_7 varchar(45) default null;
+alter table test_analytics_kpis add additional_info_8 varchar(45) default null;
+alter table test_analytics_kpis add additional_info_9 varchar(45) default null;
+alter table test_analytics_kpis add additional_info_10 varchar(45) default null;
+

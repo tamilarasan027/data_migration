@@ -1,0 +1,43 @@
+{
+  "tenants": [
+          {
+      "name": "hotstar",
+      "source_db_url": "cluster0.dlbyh.mongodb.net",
+      "source_db_user": "mozark-mongo",
+      "source_db_password": "9bZu8T5ZHMy3Vn1R",
+      "destination_db_url": "automation-dashboard-mysql-rds.chgg9hhqherh.ap-south-1.rds.amazonaws.com",
+      "destination_db_user": "mozarkadmin",
+      "destination_db_password": "Mozark##2023",
+      "details": {
+        "kpi_source_db": "hotstar-app-testing",
+        "kpi_source_collection": "hotstar-AppTestingKpis",
+        "kpi_test_identifier_key": "testId",
+        "kpi_date_time_key": "dateTime",
+        "kpi_test_identifier_type": "string",
+        "test_source_db_details": {
+          "type": "mysql",
+          "url": "13.127.79.193",
+          "user": "mark_readonly",
+          "password": "Mozark##2022",
+          "db": "functional",
+          "table": "jobs",
+          "test_identifier_key": "id"
+        },
+        "test_source_db_details_mongo": {
+          "type": "mongodb",
+          "url": "cluster0.dlbyh.mongodb.net",
+          "user": "mozark-mongo",
+          "password": "9bZu8T5ZHMy3Vn1R",
+          "db": "hotstar-app-testing",
+          "table": "hotstar-testAnalytics",
+          "test_identifier_key": "uuid.testId"
+        },
+        "kpi_destination_details": {
+          "db": "hotstar_analytics",
+          "table": "app_testing_kpis",
+          "analytics_table": "test_analytics_kpis"
+        }
+      }
+    }
+  ]
+}
